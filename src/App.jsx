@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundShapes from './components/BackgroundShapes';
+import AboutSection from './components/AboutSection';
 import ScrollIndicator from './components/ScrollIndicator';
 import gsap from 'gsap';
 
@@ -51,6 +52,7 @@ const App = () => {
             <BackgroundShapes />
             <Navbar />
             <Hero />
+            <AboutSection />
             <ScrollIndicator />
         </div>
     );

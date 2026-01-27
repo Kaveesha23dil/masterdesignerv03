@@ -11,33 +11,34 @@ const Hero = () => {
         const ctx = gsap.context(() => {
             gsap.from(titleRef.current.children, {
                 y: 100,
-                opacity: 0,
+                autoAlpha: 0,
                 duration: 1,
                 stagger: 0.2,
                 ease: "power4.out",
-                delay: 0.5
+                delay: 0.2
             });
 
             gsap.from(".hero-btn", {
                 y: 20,
-                opacity: 0,
+                autoAlpha: 0,
                 duration: 0.8,
                 stagger: 0.1,
                 ease: "power2.out",
-                delay: 1.2
+                delay: 0.8,
+                clearProps: "all"
             });
 
             gsap.from(".side-text", {
                 x: -20,
-                opacity: 0,
+                autoAlpha: 0,
                 duration: 1,
                 ease: "power2.out",
-                delay: 1.5
+                delay: 1.0
             });
 
             gsap.from(".hero-bg-img", {
                 scale: 1.2,
-                opacity: 0,
+                autoAlpha: 0,
                 duration: 2,
                 ease: "power2.out"
             });
