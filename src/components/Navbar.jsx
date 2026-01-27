@@ -1,16 +1,25 @@
-import React from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import NavOverlay from './NavOverlay';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 mix-blend-difference">
-            <div className="text-2xl font-bold font-display tracking-tighter">
-                A.
-            </div>
-            <button className="p-2 hover:bg-white/10 rounded-full transition-colors cursor-pointer">
-                <Menu size={32} />
-            </button>
-        </nav>
+        <>
+            <NavOverlay isOpen={isOpen} onClose={() => setIsOpen(false)} />
+            <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 mix-blend-difference text-white">
+                <div className="text-2xl font-bold font-display tracking-tighter">
+                    A.
+                </div>
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="p-2 hover:bg-white/10 rounded-full transition-colors cursor-pointer"
+                >
+                    {isOpen ? <X size={32} /> : <Menu size={32} />}
+                </button>
+            </nav>
+        </>
     );
 };
 
