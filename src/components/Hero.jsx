@@ -84,14 +84,14 @@ const Hero = () => {
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 <button className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-orange-600 transition-all duration-300">
-                    <span className="text-xs tracking-widest uppercase">What we do</span>
+                    <span className="text-xs tracking-widest uppercase">What is Master Designer?</span>
                     <span className="p-1 bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />
                     </span>
                 </button>
 
                 <button className="hero-btn group px-8 py-4 bg-transparent border border-white/10 text-white rounded-full font-semibold flex items-center gap-4 hover:bg-white/5 transition-all duration-300">
-                    <span className="text-xs tracking-widest uppercase">View Works</span>
+                    <span className="text-xs tracking-widest uppercase">Timeline</span>
                     <span className="p-1 bg-white/10 rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />
                     </span>

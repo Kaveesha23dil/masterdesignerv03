@@ -114,8 +114,8 @@ const AboutSection = () => {
                             </div>
                         </div>
                         <div className="text-sm">
-                            <p className="font-bold text-black">Passionately Creating <span className="font-light text-gray-500">Design Wonders:</span></p>
-                            <p className="font-bold text-black">Unleashing <span className="font-light text-gray-500 italic">Boundless Creativity</span></p>
+                            <p className="font-bold text-black">Induwara Lakdinu <span className="font-light text-gray-500"></span></p>
+                            <p className="font-bold text-black">Chairperson <span className="font-light text-gray-500 italic">, Master Designer</span></p>
                         </div>
                     </div>
                 </div>

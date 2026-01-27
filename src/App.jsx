@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundShapes from './components/BackgroundShapes';
 import AboutSection from './components/AboutSection';
+import ServicesSection from './components/ServicesSection';
 import ScrollIndicator from './components/ScrollIndicator';
 import Preloader from './components/Preloader';
 import gsap from 'gsap';
@@ -57,6 +58,7 @@ const App = () => {
             <Navbar />
             <Hero />
             <AboutSection />
+            <ServicesSection />
             <ScrollIndicator />
         </div>
     );
