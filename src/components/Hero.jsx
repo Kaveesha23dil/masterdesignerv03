@@ -3,11 +3,13 @@ import { ArrowRight, MoveRight } from 'lucide-react';
 import gsap from 'gsap';
 import heroImage from '../assets/hero.png';
 
-const Hero = () => {
+const Hero = ({ loading }) => {
     const containerRef = useRef(null);
     const titleRef = useRef(null);
 
     useLayoutEffect(() => {
+        if (loading) return; // Wait for loading to finish
+
         const ctx = gsap.context(() => {
             gsap.from(titleRef.current.children, {
                 y: 100,
@@ -45,7 +47,7 @@ const Hero = () => {
         }, containerRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [loading]);
 
     return (
         <div ref={containerRef} className="relative z-10 flex flex-col justify-center min-h-screen container mx-auto px-6 lg:px-20">

@@ -56,7 +56,7 @@ const App = () => {
 
             <BackgroundShapes />
             <Navbar />
-            <Hero />
+            <Hero loading={isLoading} />
             <AboutSection />
             <ServicesSection />
             <ScrollIndicator />
