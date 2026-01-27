@@ -72,10 +72,34 @@ const ServicesSection = () => {
     }, []);
 
     const services = [
-        "Branding and Identity Design",
-        "Website Design and Development",
-        "Advertising and Marketing Campaigns",
-        "Creative Consulting and Development"
+        {
+            title: "PHASES",
+            description: ""
+        },
+        {
+            title: "PHASE 01",
+            description: "Online weekend workshops on Adobe Illustrator and Adobe Photoshop. This phase is open to all ages, providing a foundational and advanced learning experience guided by industry experts.",
+            hoverContent: {
+                number: "01",
+                text: "IMMERSIVE WORKSHOP SERIES: FROM FUNDAMENTALS TO ADVANCED CONCEPTS"
+            }
+        },
+        {
+            title: "PHASE 02",
+            description: "Contestants invite original design submissions based on a specific theme. Showcase your creative excellence on a national platform individually or as a team of up to three.",
+            hoverContent: {
+                number: "02",
+                text: "Showcase Your Creative Excellence"
+            }
+        },
+        {
+            title: "PHASE 03",
+            description: "The top 15 individuals and teams will compete in a live physical final round. Finalists will present their designs in a live competition, competing for top honors and recognition.",
+            hoverContent: {
+                number: "03",
+                text: "Grand Final & Live Competition"
+            }
+        }
     ];
 
     return (
@@ -123,17 +147,17 @@ const ServicesSection = () => {
                             />
                         </div>
                         <h2 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold">
-                            Unique <span className="font-light text-gray-400">Ideas</span>
+                            Designing <span className="font-light text-gray-400">the</span>
                         </h2>
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
                         <h2 className="text-6xl md:text-8xl lg:text-9xl font-display">
-                            <span className="font-bold">For Your</span> <span className="font-light text-gray-400">Business.</span>
+                            <span className="font-bold">Future, </span> <span className="font-light text-gray-400">One Idea at a Time.</span>
                         </h2>
 
                         <button className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#1BC2C5] transition-colors mt-4 md:mt-0">
-                            <span className="text-xs tracking-widest uppercase">What we do</span>
+                            <span className="text-xs tracking-widest uppercase">Timeline</span>
                             <div className="bg-black text-white p-1 rounded-full">
                                 <MoveRight size={16} />
                             </div>
@@ -148,18 +172,32 @@ const ServicesSection = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`group p-8 min-h-[300px] flex flex-col justify-between border-white/10 hover:bg-white/5 transition-colors cursor-pointer ${index !== services.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''
+                        className={`group relative p-8 min-h-[300px] border-white/10 hover:bg-white/5 transition-colors cursor-pointer ${index !== services.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''
                             }`}
                     >
-                        <h3 className="text-xl font-bold max-w-[150px] leading-tight">
-                            {service.split(' ').map((word, i) => (
-                                <React.Fragment key={i}>
-                                    {word} <br />
-                                </React.Fragment>
-                            ))}
-                        </h3>
+                        {/* Default Content */}
+                        <div className={`flex flex-col justify-between h-full transition-opacity duration-300 ${service.hoverContent ? 'group-hover:opacity-0' : ''}`}>
+                            <div>
+                                <h3 className={`font-bold mb-4 ${index === 0 ? 'text-4xl tracking-tighter' : 'text-xl'}`}>
+                                    {service.title}
+                                </h3>
+                                {service.description && (
+                                    <p className="text-sm text-gray-400 leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                )}
+                            </div>
 
-                        <div className="w-2 h-2 rounded-full bg-gray-600 group-hover:bg-[var(--color-primary)] transition-colors self-start"></div>
+                            <div className="w-2 h-2 rounded-full bg-gray-600 group-hover:bg-[var(--color-primary)] transition-colors self-start mt-4"></div>
+                        </div>
+
+                        {/* Hover Content */}
+                        {service.hoverContent && (
+                            <div className="absolute inset-0 p-8 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                <div className="text-6xl font-display font-bold text-[var(--color-primary)] mb-4">{service.hoverContent.number}</div>
+                                <div className="text-xl font-bold uppercase tracking-wide leading-tight">{service.hoverContent.text}</div>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>

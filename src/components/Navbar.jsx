@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <>
             <NavOverlay isOpen={isOpen} onClose={() => setIsOpen(false)} />
-            <nav className="fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 mix-blend-difference text-white">
+            <nav className="absolute top-0 left-0 w-full flex justify-between items-center p-8 z-50 mix-blend-difference text-white">
                 <div className="w-12">
                     <img src={logo} alt="Logo" className="w-full h-auto" />
                 </div>
