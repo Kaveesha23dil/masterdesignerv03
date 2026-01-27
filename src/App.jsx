@@ -7,6 +7,7 @@ import ServicesSection from './components/ServicesSection';
 import TimelineSection from './components/TimelineSection';
 import PrizesSection from './components/PrizesSection';
 import GuidelinesSection from './components/GuidelinesSection';
+import ContactSection from './components/ContactSection';
 import ScrollIndicator from './components/ScrollIndicator';
 import Preloader from './components/Preloader';
 import gsap from 'gsap';
@@ -65,6 +66,7 @@ const App = () => {
             <TimelineSection />
             <PrizesSection />
             <GuidelinesSection />
+            <ContactSection />
             <ScrollIndicator />
         </div>
     );
