@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import BackgroundShapes from './components/BackgroundShapes';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
+import TimelineSection from './components/TimelineSection';
 import GuidelinesSection from './components/GuidelinesSection';
 import ScrollIndicator from './components/ScrollIndicator';
 import Preloader from './components/Preloader';
@@ -60,6 +61,7 @@ const App = () => {
             <Hero loading={isLoading} />
             <AboutSection />
             <ServicesSection />
+            <TimelineSection />
             <GuidelinesSection />
             <ScrollIndicator />
         </div>
