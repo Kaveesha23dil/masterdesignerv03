@@ -69,10 +69,10 @@ const Hero = ({ loading }) => {
             <div ref={titleRef} className="mb-12 mt-10">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-medium leading-[1.1] tracking-tight">
                     <div className="overflow-hidden">
-                        <span className="block">Designing <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">a Better</span></span>
+                        <span className="block">Great <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Design</span></span>
                     </div>
                     <div className="overflow-hidden">
-                        <span className="block font-bold">World <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Today</span></span>
+                        <span className="block font-bold">Creates <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Culture</span></span>
                     </div>
                 </h1>
             </div>
@@ -85,7 +85,7 @@ const Hero = ({ loading }) => {
             </div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <button className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-orange-600 transition-all duration-300">
+                <button className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#1BC2C5] transition-all duration-300">
                     <span className="text-xs tracking-widest uppercase">What is Master Designer?</span>
                     <span className="p-1 bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />

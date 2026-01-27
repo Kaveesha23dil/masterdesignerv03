@@ -132,7 +132,7 @@ const ServicesSection = () => {
                             <span className="font-bold">For Your</span> <span className="font-light text-gray-400">Business.</span>
                         </h2>
 
-                        <button className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-orange-600 transition-colors mt-4 md:mt-0">
+                        <button className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#1BC2C5] transition-colors mt-4 md:mt-0">
                             <span className="text-xs tracking-widest uppercase">What we do</span>
                             <div className="bg-black text-white p-1 rounded-full">
                                 <MoveRight size={16} />
