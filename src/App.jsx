@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundShapes from './components/BackgroundShapes';
 import AboutSection from './components/AboutSection';
 import ScrollIndicator from './components/ScrollIndicator';
+import Preloader from './components/Preloader';
 import gsap from 'gsap';
 
 const App = () => {
     const cursorRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         // Custom cursor logic
@@ -43,6 +45,8 @@ const App = () => {
 
     return (
         <div className="relative min-h-screen w-full bg-[#050505] text-white selection:bg-orange-500 selection:text-black">
+            {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+
             {/* Custom Cursor */}
             <div
                 ref={cursorRef}
