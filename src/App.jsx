@@ -8,6 +8,7 @@ import TimelineSection from './components/TimelineSection';
 import PrizesSection from './components/PrizesSection';
 import GuidelinesSection from './components/GuidelinesSection';
 import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import ScrollIndicator from './components/ScrollIndicator';
 import Preloader from './components/Preloader';
 import gsap from 'gsap';
@@ -67,6 +68,7 @@ const App = () => {
             <PrizesSection />
             <GuidelinesSection />
             <ContactSection />
+            <Footer />
             <ScrollIndicator />
         </div>
     );
