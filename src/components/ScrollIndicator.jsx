@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 
 const ScrollIndicator = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const threshold = 100; // Distance from bottom within which to hide
+
+            // Hide if close to the bottom (footer area)
+            if (documentHeight - scrollPosition < threshold) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className="fixed bottom-12 right-12 z-20 hidden md:flex items-center justify-center">
+        <div
+            className={`fixed bottom-12 right-12 z-20 hidden md:flex items-center justify-center transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
             <div className="relative w-32 h-32 flex items-center justify-center">
                 {/* Rotating Text */}
                 <div className="absolute inset-0 animate-spin-slow">
