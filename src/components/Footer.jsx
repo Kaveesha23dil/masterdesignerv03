@@ -132,19 +132,19 @@ const Footer = () => {
                   <input
                     type="email"
                     placeholder="ENTER OUR EMAIL"
-                    className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-6 pr-14 text-xs tracking-widest uppercase placeholder:text-gray-500 focus:outline-none focus:border-orange-400 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-6 pr-14 text-xs tracking-widest uppercase placeholder:text-gray-500 focus:outline-none focus:border-[var(--color-primary)] transition-colors"
                   />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
+                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
                     <MoveRight size={16} />
                   </button>
                 </div>
               </div>
 
               <div className="flex gap-6 mt-12 md:mt-24">
-                <a href="#" className="text-white hover:text-orange-400 transition-colors"><span className="font-bold">Bē</span></a>
-                <a href="#" className="text-white hover:text-orange-400 transition-colors"><GlobeIcon size={18} /></a>
-                <a href="#" className="text-white hover:text-orange-400 transition-colors"><Twitter size={18} /></a>
-                <a href="#" className="text-white hover:text-orange-400 transition-colors"><Github size={18} /></a>
+                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><span className="font-bold">Bē</span></a>
+                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><GlobeIcon size={18} /></a>
+                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><Twitter size={18} /></a>
+                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><Github size={18} /></a>
               </div>
 
               <div className="mt-8 text-xs text-gray-500">
@@ -155,7 +155,7 @@ const Footer = () => {
             {/* Column 2: Navigation */}
             <div ref={addToColumnsRef} className="flex flex-col gap-6 lg:pl-12">
               <nav className="flex flex-col gap-4">
-                <a href="#" className="text-2xl font-bold text-orange-400">Home</a>
+                <a href="#" className="text-2xl font-bold text-[var(--color-primary)]">Home</a>
                 <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Portfolio</a>
                 <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Services</a>
                 <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Contact</a>
@@ -196,7 +196,7 @@ const Footer = () => {
         {/* Right Vertical Action */}
         <div className="hidden md:flex w-24 flex-col items-center justify-end pb-12 border-l border-white/10 group cursor-pointer overflow-hidden" onClick={scrollToTop}>
           <div ref={rightRef} className="flex flex-col items-center">
-            <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-orange-400 group-hover:text-black transition-colors">
+            <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-[var(--color-primary)] group-hover:text-black transition-colors">
               <ArrowUp size={16} />
             </div>
             <span className="text-xs uppercase tracking-[0.3em] -rotate-90 whitespace-nowrap text-gray-400 group-hover:text-white transition-colors">Back to Top</span>

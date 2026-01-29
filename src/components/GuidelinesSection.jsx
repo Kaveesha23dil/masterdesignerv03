@@ -66,7 +66,7 @@ const GuidelinesSection = () => {
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
-            icon: <Ticket className="w-8 h-8 text-orange-400" />,
+            icon: <Ticket className="w-8 h-8 text-[var(--color-primary)]" />,
             title: "Your ID",
             description: "After the registration process, you will get a number. You should keep that number with you for the future work of the competition.",
             className: "md:col-span-2 md:row-span-1 bg-white/5"

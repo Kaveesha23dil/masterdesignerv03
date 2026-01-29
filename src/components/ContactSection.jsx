@@ -24,7 +24,7 @@ const ContactImageItem = ({ image, title, subTitle, link, delay = 0 }) => {
 
             {/* Content Overlay - mimicking "Meet Our Team" caption style if typical, or just clean info */}
             <div className="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <h4 className="text-[#FFB200] text-xs tracking-[0.2em] font-bold uppercase mb-1">
+                <h4 className="text-[var(--color-primary)] text-xs tracking-[0.2em] font-bold uppercase mb-1">
                     {subTitle}
                 </h4>
                 <p className="text-xl font-bold text-white">
@@ -68,6 +68,18 @@ const ContactSection = () => {
                     }
                 }
             );
+
+            gsap.from(".contact-grid > div", {
+                y: 50,
+                autoAlpha: 0,
+                duration: 0.8,
+                stagger: 0.15,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".contact-grid",
+                    start: "top 80%"
+                }
+            });
         }, sectionRef);
         return () => ctx.revert();
     }, []);
@@ -105,7 +117,7 @@ const ContactSection = () => {
                     </p>
 
                     {/* CTA Button */}
-                    <button className="group flex items-center justify-between w-48 bg-[#FFB200] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#ffc033] transition-colors mb-20 shadow-lg shadow-orange-500/20">
+                    <button className="group flex items-center justify-between w-48 bg-[var(--color-primary)] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#1BC2C5] transition-colors mb-20 shadow-lg shadow-[var(--color-primary)]/20">
                         Read More
                         <span className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors -mr-2">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -134,11 +146,11 @@ const ContactSection = () => {
             <div className="relative w-full lg:w-[55%] flex flex-col bg-white z-10">
                 {/* Top Label */}
                 <div className="absolute top-10 right-10 flex items-center gap-2 text-xs font-medium text-gray-400 z-20">
-                    <span className="text-[#FFB200] text-lg">✦</span> The founders of our agency
+                    <span className="text-[var(--color-primary)] text-lg">✦</span> The founders of our agency
                 </div>
 
                 {/* Grid Container */}
-                <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-2 contact-grid">
                     {/* Grid Images */}
                     <div className="border-b border-r border-white aspect-square md:aspect-auto relative">
                         <ContactImageItem image={contactImg1} title="Email Us" subTitle="Support" link="mailto:hello@master.design" />

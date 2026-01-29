@@ -1,5 +1,8 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BackgroundShapes = () => {
     const shape1Ref = useRef(null);
@@ -8,16 +11,24 @@ const BackgroundShapes = () => {
     useLayoutEffect(() => {
         gsap.to(shape1Ref.current, {
             rotation: 360,
-            duration: 120,
-            repeat: -1,
-            ease: "linear"
+            ease: "none",
+            scrollTrigger: {
+                trigger: document.body,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            }
         });
 
         gsap.to(shape2Ref.current, {
             rotation: -360,
-            duration: 150,
-            repeat: -1,
-            ease: "linear"
+            ease: "none",
+            scrollTrigger: {
+                trigger: document.body,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 2
+            }
         });
     }, []);
 
