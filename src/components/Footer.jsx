@@ -1,22 +1,108 @@
 import React from 'react';
 import { MoveRight, ArrowUp, Facebook, Instagram, Twitter, Github } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import footerMountains from '../assets/footer_bg.jpg';
 import projectChair from '../assets/projectchair.jpeg'; // Assuming this might be needed, but sticking to text for now based on image
 
 const Footer = () => {
+  const footerRef = React.useRef(null);
+  const bgRef = React.useRef(null);
+  const leftRef = React.useRef(null);
+  const rightRef = React.useRef(null);
+  const columnsRef = React.useRef([]);
+
+  React.useLayoutEffect(() => {
+    // Register ScrollTrigger specific to this component execution to avoid registration issues if called multiple times or HMR
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      // Background Parallax
+      gsap.fromTo(bgRef.current,
+        { scale: 1.1, y: -20 },
+        {
+          scale: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: 1,
+          }
+        }
+      );
+
+      // Left Side Text (Homepage) - Slide in from left
+      gsap.fromTo(leftRef.current,
+        { x: -50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top 80%",
+          }
+        }
+      );
+
+      // Right Side Button (Back to Top) - Slide in from right
+      gsap.fromTo(rightRef.current,
+        { x: 50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top 80%",
+          }
+        }
+      );
+
+      // Columns Staggered Animation
+      gsap.fromTo(columnsRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: footerRef.current,
+            start: "top 75%",
+          }
+        }
+      );
+
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const addToColumnsRef = (el) => {
+    if (el && !columnsRef.current.includes(el)) {
+      columnsRef.current.push(el);
+    }
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="w-full relative overflow-hidden bg-black text-white font-sans min-h-screen flex flex-col justify-center">
+    <footer ref={footerRef} className="w-full relative overflow-hidden bg-black text-white font-sans min-h-screen flex flex-col justify-center">
 
       {/* Background Image with Heavy Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
+          ref={bgRef}
           src={footerMountains}
           alt="Background"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-20 scale-110" // Initial scale set for consistency before JS loads
         />
         <div className="absolute inset-0 bg-black/80"></div>
       </div>
@@ -24,8 +110,10 @@ const Footer = () => {
       <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
 
         {/* Left Vertical Text */}
-        <div className="hidden md:flex w-24 items-end justify-center pb-12 border-r border-white/10">
-          <span className="text-xs uppercase tracking-[0.3em] -rotate-90 whitespace-nowrap text-gray-400">Homepage</span>
+        <div className="hidden md:flex w-24 items-end justify-center pb-12 border-r border-white/10 overflow-hidden">
+          <div ref={leftRef}>
+            <span className="block text-xs uppercase tracking-[0.3em] -rotate-90 whitespace-nowrap text-gray-400">Homepage</span>
+          </div>
         </div>
 
         {/* Main Content Area */}
@@ -35,7 +123,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8">
 
             {/* Column 1: Brand & Newsletter */}
-            <div className="flex flex-col gap-8">
+            <div ref={addToColumnsRef} className="flex flex-col gap-8">
               <h2 className="text-4xl font-bold font-display">Ashley.</h2>
 
               <div className="mt-4">
@@ -65,7 +153,7 @@ const Footer = () => {
             </div>
 
             {/* Column 2: Navigation */}
-            <div className="flex flex-col gap-6 lg:pl-12">
+            <div ref={addToColumnsRef} className="flex flex-col gap-6 lg:pl-12">
               <nav className="flex flex-col gap-4">
                 <a href="#" className="text-2xl font-bold text-orange-400">Home</a>
                 <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Portfolio</a>
@@ -84,7 +172,7 @@ const Footer = () => {
             </div>
 
             {/* Column 3: Links & Address 2 */}
-            <div className="flex flex-col gap-4">
+            <div ref={addToColumnsRef} className="flex flex-col gap-4">
               <nav className="flex flex-col gap-4 text-sm text-gray-500">
                 <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-white transition-colors">Terms and conditions</a>
@@ -106,11 +194,13 @@ const Footer = () => {
         </div>
 
         {/* Right Vertical Action */}
-        <div className="hidden md:flex w-24 flex-col items-center justify-end pb-12 border-l border-white/10 group cursor-pointer" onClick={scrollToTop}>
-          <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-orange-400 group-hover:text-black transition-colors">
-            <ArrowUp size={16} />
+        <div className="hidden md:flex w-24 flex-col items-center justify-end pb-12 border-l border-white/10 group cursor-pointer overflow-hidden" onClick={scrollToTop}>
+          <div ref={rightRef} className="flex flex-col items-center">
+            <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-orange-400 group-hover:text-black transition-colors">
+              <ArrowUp size={16} />
+            </div>
+            <span className="text-xs uppercase tracking-[0.3em] -rotate-90 whitespace-nowrap text-gray-400 group-hover:text-white transition-colors">Back to Top</span>
           </div>
-          <span className="text-xs uppercase tracking-[0.3em] -rotate-90 whitespace-nowrap text-gray-400 group-hover:text-white transition-colors">Back to Top</span>
         </div>
       </div>
     </footer>
