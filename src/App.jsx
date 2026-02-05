@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BackgroundShapes from './components/BackgroundShapes';
 import AboutSection from './components/AboutSection';
+import HistorySection from './components/HistorySection';
 import ServicesSection from './components/ServicesSection';
 import TimelineSection from './components/TimelineSection';
 import PrizesSection from './components/PrizesSection';
@@ -73,6 +74,7 @@ const App = () => {
             <Navbar />
             <Hero loading={isLoading} />
             <AboutSection />
+            <HistorySection />
             <ServicesSection />
             <TimelineSection />
             <PrizesSection />
