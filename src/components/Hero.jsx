@@ -3,6 +3,7 @@ import { ArrowRight, MoveRight } from 'lucide-react';
 import gsap from 'gsap';
 import heroImage from '../assets/hero.png';
 import heroVideo from '../assets/Hooded_character_gazing_at_city_20261007122346.mp4';
+import OrganizerLogos from './OrganizerLogos';
 
 const Hero = ({ loading }) => {
     const containerRef = useRef(null);
@@ -91,7 +92,7 @@ const Hero = ({ loading }) => {
             </div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <button onClick={() => window.location.assign("/services")} className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#1BC2C5] transition-all duration-300">
+                <button onClick={() => window.location.assign("/services")} className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#ddbd80] transition-all duration-300">
                     <span className="text-xs tracking-widest uppercase">Explore the Program</span>
                     <span className="p-1 bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />
@@ -105,6 +106,7 @@ const Hero = ({ loading }) => {
                     </span>
                 </button>
             </div>
+            <OrganizerLogos />
         </div>
     );
 };

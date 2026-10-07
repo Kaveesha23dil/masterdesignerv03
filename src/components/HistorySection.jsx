@@ -95,11 +95,11 @@ const HistorySection = () => {
     };
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen py-24 px-4 md:px-10 overflow-hidden bg-[#050505]">
+        <section ref={sectionRef} className="relative w-full min-h-screen py-24 px-4 md:px-10 overflow-hidden bg-[#111210]">
             {/* Background gradients */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color-primary)]/10 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[var(--color-assassin-red)]/10 rounded-full blur-[120px]"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto">
@@ -120,7 +120,7 @@ const HistorySection = () => {
                 {/* Progress Line */}
                 <div className="relative mb-12">
                     <div className="w-full h-[2px] bg-white/10 mx-auto">
-                        <div ref={progressLineRef} className="h-full bg-gradient-to-r from-[var(--color-primary)] via-purple-500 to-[var(--color-primary)] origin-left"></div>
+                        <div ref={progressLineRef} className="h-full bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-assassin-red)] to-[var(--color-primary)] origin-left"></div>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@ const HistorySection = () => {
                                 {/* Card */}
                                 <div className="relative h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm hover:border-[var(--color-primary)]/50 transition-all duration-500 overflow-hidden">
                                     {/* Glow effect on hover */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/0 to-purple-500/0 group-hover:from-[var(--color-primary)]/5 group-hover:to-purple-500/5 transition-all duration-500"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/0 to-[var(--color-assassin-red)]/0 group-hover:from-[var(--color-primary)]/5 group-hover:to-[var(--color-assassin-red)]/5 transition-all duration-500"></div>
 
                                     {/* Content */}
                                     <div className="relative z-10">

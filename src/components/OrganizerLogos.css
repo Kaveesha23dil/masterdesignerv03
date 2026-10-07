@@ -1,0 +1,8 @@
+.organizer-identity { margin-top: 28px; }
+.organizer-identity > p { color: #b9b0a1; font-size: 9px; letter-spacing: .2em; margin-bottom: 10px; }
+.organizer-logos { display: flex; align-items: stretch; flex-wrap: wrap; gap: 12px; }
+.organizer-logos > div { width: 190px; height: 66px; padding: 12px 16px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 4px; }
+.organizer-logos img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.global-competition-logo { display: block; max-width: 220px; max-height: 100px; padding: 12px; background: #fff; border-radius: 4px; object-fit: contain; }
+.global-competition-caption { margin-top: 8px; font-size: 11px; color: #82796c; }
+@media (max-width: 540px) { .organizer-logos > div { width: 150px; height: 56px; padding: 10px; } }

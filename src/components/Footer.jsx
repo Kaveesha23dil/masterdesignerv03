@@ -1,12 +1,13 @@
 import { ArrowUpRight } from 'lucide-react';
 import './Footer.css';
+import eventLogo from '../assets/DecodeXtreme Logo.webp';
 
 const Footer = () => (
   <footer className="minimal-footer">
     <div className="minimal-footer-panel">
       <div className="minimal-footer-top">
         <div className="minimal-footer-brand">
-          <a href="/" aria-label="DecodeXtreme homepage">DECODEXTREME</a>
+          <a href="/" aria-label="DecodeXtreme homepage"><img className="minimal-footer-brand-logo" src={eventLogo} alt="DecodeXtreme 2026" /></a>
           <p>Think. Solve. Compete.<br />Three open sessions. One SLTC team challenge.<br />Prepare together for IEEEXtreme 20.0.</p>
         </div>
         <nav className="minimal-footer-column" aria-label="Footer quick links">

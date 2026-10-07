@@ -125,11 +125,11 @@ const PrizesSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full py-32 px-4 md:px-10 bg-[#050505] overflow-hidden">
+        <section ref={sectionRef} className="relative w-full py-32 px-4 md:px-10 bg-[#111210] overflow-hidden">
             {/* Background Atmosphere */}
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-[var(--color-primary)]/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-20 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-20 left-0 w-[500px] h-[500px] bg-[var(--color-assassin-red)]/10 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="relative max-w-7xl mx-auto space-y-24 prizes-grid-container">
 
@@ -207,7 +207,7 @@ const PrizesSection = () => {
                             amount="Pending"
                             subTitle="Participation" // Changed from VOTING to Voting for consistency
                             isWinner={true}
-                            color="#8b5cf6" // Keep purple override
+                            color="#8f302d" // Keep purple override
                         />
                     </div>
                 </div>

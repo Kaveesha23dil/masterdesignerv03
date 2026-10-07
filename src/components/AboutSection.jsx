@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote, ArrowUp } from 'lucide-react';
 import projectChair from '../assets/projectchair.jpeg';
+import globalLogo from '../assets/IEEEXtreme 20.0 Color Logo (1).webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,7 +70,7 @@ const AboutSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-white text-black py-20 px-8 md:px-24 overflow-hidden flex items-center">
+        <section ref={sectionRef} className="relative w-full min-h-screen bg-[var(--color-parchment)] text-black py-20 px-8 md:px-24 overflow-hidden flex items-center">
             {/* Background Geometric Shapes */}
             <div ref={shapesRef} className="absolute top-0 right-0 w-1/2 h-full pointer-events-none opacity-5 origin-center">
                 <div className="absolute top-0 left-0 w-full h-px bg-black"></div>
@@ -102,6 +103,12 @@ const AboutSection = () => {
                         </p>
                     </div>
 
+                    <div>
+                        <a href="https://ieeextreme.org/" target="_blank" rel="noopener noreferrer">
+                            <img src={globalLogo} alt="IEEEXtreme 20.0 programming competition" className="global-competition-logo" loading="lazy" />
+                        </a>
+                        <p className="global-competition-caption">The global competition · Separate registration</p>
+                    </div>
                     <div className="flex items-center gap-6 pt-4">
                         <div className="relative shrink-0">
                             <img
