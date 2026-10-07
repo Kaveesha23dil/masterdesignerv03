@@ -111,14 +111,14 @@ const ContactSection = () => {
 
                     {/* Description */}
                     <p className="text-gray-500 text-lg leading-relaxed mb-12 font-light">
-                        We are talented individuals who are passionate about bringing ideas to life. With a diverse range of backgrounds and skill sets, we collaborate to produce effective solutions for our clients.
+                        DecodeXtreme 2026 is organized by the IEEE Student Branch of SLTC and its Computer Society. The organizing and delegate teams support your preparation and participation.
                         <br /><br />
-                        Together, our creative team is committed to delivering impactful work that exceeds expectations.
+                        Approved committee names, speaker and proctor profiles, past ambassador years, and public support contacts will be announced.
                     </p>
 
                     {/* CTA Button */}
-                    <button className="group flex items-center justify-between w-48 bg-[var(--color-primary)] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#1BC2C5] transition-colors mb-20 shadow-lg shadow-[var(--color-primary)]/20">
-                        Read More
+                    <button onClick={() => window.location.assign("/portfolio")} className="group flex items-center justify-between w-48 bg-[var(--color-primary)] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#1BC2C5] transition-colors mb-20 shadow-lg shadow-[var(--color-primary)]/20">
+                        Our Team
                         <span className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors -mr-2">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -129,10 +129,10 @@ const ContactSection = () => {
 
                     {/* Bottom Emphasis Text */}
                     <div className="text-2xl mt-auto">
-                        <span className="font-light text-gray-500">We </span>
-                        <span className="font-bold text-black">delivering</span> <br />
-                        <span className="font-light text-gray-500">exceptional </span>
-                        <span className="font-bold text-black">results.</span>
+                        <span className="font-light text-gray-500">Together, </span>
+                        <span className="font-bold text-black">we prepare</span> <br />
+                        <span className="font-light text-gray-500">to </span>
+                        <span className="font-bold text-black">compete.</span>
                     </div>
                 </div>
 
@@ -146,27 +146,27 @@ const ContactSection = () => {
             <div className="relative w-full lg:w-[55%] flex flex-col bg-white z-10">
                 {/* Top Label */}
                 <div className="absolute top-10 right-10 flex items-center gap-2 text-xs font-medium text-gray-400 z-20">
-                    <span className="text-[var(--color-primary)] text-lg">✦</span> The founders of our agency
+                    <span className="text-[var(--color-primary)] text-lg">✦</span> The DecodeXtreme organizers
                 </div>
 
                 {/* Grid Container */}
                 <div className="flex-1 grid grid-cols-1 md:grid-cols-2 contact-grid">
                     {/* Grid Images */}
                     <div className="border-b border-r border-white aspect-square md:aspect-auto relative">
-                        <ContactImageItem image={contactImg1} title="Email Us" subTitle="Support" link="mailto:hello@master.design" />
+                        <ContactImageItem image={contactImg1} title="Support Pending" subTitle="Delegate Help" link="/pages" />
                     </div>
 
                     <div className="border-b border-white aspect-square md:aspect-auto relative">
-                        <ContactImageItem image={contactImg3} title="Visit Us" subTitle="Office" link="#" />
+                        <ContactImageItem image={contactImg3} title="Fully Online" subTitle="Event Format" link="/services" />
                     </div>
 
                     <div className="border-r border-white aspect-square md:aspect-auto relative">
-                        <ContactImageItem image={contactImg2} title="Call Us" subTitle="Sales" link="tel:+94771234567" />
+                        <ContactImageItem image={contactImg2} title="Our Organizers" subTitle="SLTC IEEE" link="/portfolio" />
                     </div>
 
                     <div className="aspect-square md:aspect-auto relative">
                         {/* Reusing image 3 for the 4th slot as placeholder */}
-                        <ContactImageItem image={contactImg3} title="Socials" subTitle="Follow" link="#" />
+                        <ContactImageItem image={contactImg3} title="Event Updates" subTitle="Announcements" link="/newsletter" />
                     </div>
                 </div>
             </div>

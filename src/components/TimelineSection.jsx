@@ -5,36 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const timelineData = [
-    {
-        date: "23RD JANUARY TO 29TH JANUARY 2026",
-        title: "REGISTRATION FOR WORKSHOPS",
-        description: "Register to be part of Master Designer v3.0 workshops and secure your spot to gain graphic design knowledge."
-    },
-    {
-        date: "31ST JANUARY TO 22ND FEBRUARY 2026",
-        title: "WORKSHOP SERIES",
-        description: "An eight-day immersive workshop series guided by industry experts, covering fundamentals to advanced concepts."
-    },
-    {
-        date: "9TH FEBRUARY TO 16TH FEBRUARY 2026",
-        title: "REGISTRATION FOR COMPETITION",
-        description: "Showcase your creative excellence on a national platform. Register for the online competition phase."
-    },
-    {
-        date: "16TH FEBRUARY TO 21ST FEBRUARY 2026",
-        title: "SUBMISSION PERIOD (PHASE 02)",
-        description: "Submit your original designs and let your creativity speak. Unleash your innovation."
-    },
-    {
-        date: "24TH FEBRUARY TO 3RD MARCH 2026",
-        title: "VOTING ROUND",
-        description: "Promote your design and rally support through public voting to choose the most outstanding creations."
-    },
-    {
-        date: "7TH MARCH 2026",
-        title: "GRAND FINAL & CLOSING",
-        description: "Finalists present designs in a live competition, competing for top honors and industry recognition."
-    }
+    { date: "12 OCTOBER 2026", title: "AWARENESS", description: "Discover the competition and participation pathway. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
+    { date: "14 OCTOBER 2026", title: "PROGRAMMING FUNDAMENTALS", description: "Problem decomposition, algorithms, coding, testing, and debugging. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
+    { date: "21 OCTOBER 2026", title: "ADVANCED STRATEGY", description: "Teamwork, time management, problem triage, and contest execution. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
+    { date: "24 OCTOBER 2026", title: "PREXTREME CHALLENGE", description: "Online on HackerRank. Check-in 8:00 AM; coding 9:00 AM to 6:00 PM. Exactly three SLTC undergraduates per team. All times are Sri Lanka time (UTC+05:30)." }
 ];
 
 const TimelineSection = () => {
@@ -97,7 +71,7 @@ const TimelineSection = () => {
     };
 
     return (
-        <section ref={sectionRef} className="relative w-full py-20 px-4 md:px-10 overflow-hidden bg-[#050505]">
+        <section id="timeline" ref={sectionRef} className="relative w-full py-20 px-4 md:px-10 overflow-hidden bg-[#050505]">
             {/* Background elements if needed */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 z-0">
                 {/* Optional subtle gradient or noise */}

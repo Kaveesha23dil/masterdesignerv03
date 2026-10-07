@@ -124,49 +124,50 @@ const Footer = () => {
 
             {/* Column 1: Brand & Newsletter */}
             <div ref={addToColumnsRef} className="flex flex-col gap-8">
-              <h2 className="text-4xl font-bold font-display">Ashley.</h2>
+              <h2 className="text-4xl font-bold font-display">DecodeXtreme.</h2>
 
               <div className="mt-4">
-                <label className="block text-sm text-gray-400 mb-4">Subscribe our newsletter:</label>
+                <label className="block text-sm text-gray-400 mb-4">Event updates: registration links coming soon</label>
                 <div className="relative max-w-sm">
                   <input
                     type="email"
-                    placeholder="ENTER OUR EMAIL"
+                    placeholder="ANNOUNCEMENTS PENDING"
+                    disabled
                     className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-6 pr-14 text-xs tracking-widest uppercase placeholder:text-gray-500 focus:outline-none focus:border-[var(--color-primary)] transition-colors"
                   />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
+                  <button aria-label="View event updates" onClick={() => window.location.assign("/newsletter")} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
                     <MoveRight size={16} />
                   </button>
                 </div>
               </div>
 
               <div className="flex gap-6 mt-12 md:mt-24">
-                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><span className="font-bold">Bē</span></a>
-                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><GlobeIcon size={18} /></a>
-                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><Twitter size={18} /></a>
-                <a href="#" className="text-white hover:text-[var(--color-primary)] transition-colors"><Github size={18} /></a>
+                <a href="/newsletter" className="text-white hover:text-[var(--color-primary)] transition-colors"><span className="font-bold">Bē</span></a>
+                <a href="/newsletter" className="text-white hover:text-[var(--color-primary)] transition-colors"><GlobeIcon size={18} /></a>
+                <a href="/newsletter" className="text-white hover:text-[var(--color-primary)] transition-colors"><Twitter size={18} /></a>
+                <a href="/newsletter" className="text-white hover:text-[var(--color-primary)] transition-colors"><Github size={18} /></a>
               </div>
 
               <div className="mt-8 text-xs text-gray-500">
-                <p>© Copyright 2023 - Mil. All Rights Reserved.</p>
+                <p>© 2026 DecodeXtreme. Organized by SLTC IEEE Student Branch and Computer Society.</p>
               </div>
             </div>
 
             {/* Column 2: Navigation */}
             <div ref={addToColumnsRef} className="flex flex-col gap-6 lg:pl-12">
               <nav className="flex flex-col gap-4">
-                <a href="#" className="text-2xl font-bold text-[var(--color-primary)]">Home</a>
-                <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Portfolio</a>
-                <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Services</a>
-                <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Contact</a>
-                <a href="#" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Blog</a>
+                <a href="/" className="text-2xl font-bold text-[var(--color-primary)]">Home</a>
+                <a href="/portfolio" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Our Team</a>
+                <a href="/services" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Program</a>
+                <a href="/pages" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Delegate Guide</a>
+                <a href="/newsletter" className="text-2xl font-bold text-gray-400 hover:text-white transition-colors">Updates</a>
               </nav>
 
               <div className="mt-auto pt-16">
-                <h3 className="text-sm font-bold mb-4">Canada</h3>
+                <h3 className="text-sm font-bold mb-4">Sri Lanka</h3>
                 <p className="text-xs text-gray-500 leading-relaxed max-w-[200px]">
-                  71 South Los Carneros Road,<br />
-                  California +51 174 705 812
+                  Fully online program.<br />
+                  All times: UTC+05:30.
                 </p>
               </div>
             </div>
@@ -174,17 +175,17 @@ const Footer = () => {
             {/* Column 3: Links & Address 2 */}
             <div ref={addToColumnsRef} className="flex flex-col gap-4">
               <nav className="flex flex-col gap-4 text-sm text-gray-500">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms and conditions</a>
-                <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Careers</a>
+                <a href="/newsletter" className="hover:text-white transition-colors">Privacy notice pending</a>
+                <a href="/pages" className="hover:text-white transition-colors">Challenge rules pending</a>
+                <a href="/pages#timeline" className="hover:text-white transition-colors">Session Schedule</a>
+                <a href="https://ieeextreme.org/" className="hover:text-white transition-colors">IEEEXtreme Information</a>
               </nav>
 
               <div className="mt-auto pt-16">
-                <h3 className="text-sm font-bold mb-4">Germany</h3>
+                <h3 className="text-sm font-bold mb-4">Local Participation</h3>
                 <p className="text-xs text-gray-500 leading-relaxed max-w-[200px]">
-                  Leehove 40, 2678 MC De Lier,<br />
-                  Netherlands +31 174 705 811
+                  Free. No IEEE membership needed.<br />
+                  Public support contacts pending.
                 </p>
               </div>
             </div>

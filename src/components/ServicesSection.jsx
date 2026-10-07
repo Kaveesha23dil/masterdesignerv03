@@ -73,31 +73,31 @@ const ServicesSection = () => {
 
     const services = [
         {
-            title: "PHASES",
+            title: "SESSIONS",
             description: ""
         },
         {
-            title: "PHASE 01",
-            description: "Online weekend workshops on Adobe Illustrator and Adobe Photoshop. This phase is open to all ages, providing a foundational and advanced learning experience guided by industry experts.",
+            title: "12 OCT / AWARENESS",
+            description: "Discover IEEEXtreme and your participation pathway. Open to everyone on Zoom, 8:00 PM to approximately 10:00 PM, Sri Lanka time. Free; no IEEE membership needed.",
             hoverContent: {
                 number: "01",
-                text: "IMMERSIVE WORKSHOP SERIES: FROM FUNDAMENTALS TO ADVANCED CONCEPTS"
+                text: "DISCOVER THE COMPETITION"
             }
         },
         {
-            title: "PHASE 02",
-            description: "Contestants invite original design submissions based on a specific theme. Showcase your creative excellence on a national platform individually or as a team of up to three.",
+            title: "14 OCT / FUNDAMENTALS",
+            description: "Explore problem decomposition, algorithms, coding, testing, and debugging. Open to everyone on Zoom, 8:00 PM to approximately 10:00 PM, Sri Lanka time.",
             hoverContent: {
                 number: "02",
-                text: "Showcase Your Creative Excellence"
+                text: "BUILD YOUR CODING FOUNDATIONS"
             }
         },
         {
-            title: "PHASE 03",
-            description: "The top 15 individuals and teams will compete in a live physical final round. Finalists will present their designs in a live competition, competing for top honors and recognition.",
+            title: "21 OCT / STRATEGY",
+            description: "Prepare for teamwork, time management, problem triage, and contest execution. Open to everyone on Zoom, 8:00 PM to approximately 10:00 PM, Sri Lanka time.",
             hoverContent: {
                 number: "03",
-                text: "Grand Final & Live Competition"
+                text: "PLAN YOUR TEAM STRATEGY"
             }
         }
     ];
@@ -133,7 +133,7 @@ const ServicesSection = () => {
 
                 {/* Header Content */}
                 <div className="text-right mb-12 text-gray-400 text-sm max-w-xs ml-auto hidden md:block">
-                    Professionals focused on helping your brand grow and move forward.
+                    PreXtreme: 24 October on HackerRank. Check-in 8:00 AM; coding 9:00 AM-6:00 PM. Exactly three SLTC undergraduates. Registration links and the common deadline will be announced.
                 </div>
 
                 <div ref={titleRef} className="text-center mb-32 space-y-4">
@@ -147,16 +147,16 @@ const ServicesSection = () => {
                             />
                         </div>
                         <h2 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold">
-                            Designing <span className="font-light text-gray-400">the</span>
+                            Preparing <span className="font-light text-gray-400">for</span>
                         </h2>
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
                         <h2 className="text-6xl md:text-8xl lg:text-9xl font-display">
-                            <span className="font-bold">Future, </span> <span className="font-light text-gray-400">One Idea at a Time.</span>
+                            <span className="font-bold">Xtreme, </span> <span className="font-light text-gray-400">One Step at a Time.</span>
                         </h2>
 
-                        <button className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#1BC2C5] transition-colors mt-4 md:mt-0">
+                        <button onClick={() => window.location.assign("/pages#timeline")} className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#1BC2C5] transition-colors mt-4 md:mt-0">
                             <span className="text-xs tracking-widest uppercase">Timeline</span>
                             <div className="bg-black text-white p-1 rounded-full">
                                 <MoveRight size={16} />

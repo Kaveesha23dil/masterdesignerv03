@@ -69,30 +69,29 @@ const Hero = ({ loading }) => {
             <div ref={titleRef} className="mb-12 mt-10">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-medium leading-[1.1] tracking-tight">
                     <div className="overflow-hidden">
-                        <span className="block">Great <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Design</span></span>
+                        <span className="block">Think. <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Solve.</span></span>
                     </div>
                     <div className="overflow-hidden">
-                        <span className="block font-bold">Creates <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Culture</span></span>
+                        <span className="block font-bold">Compete. <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Beyond.</span></span>
                     </div>
                 </h1>
             </div>
 
             <div className="max-w-xl mb-12 text-gray-400 text-sm md:text-base leading-relaxed opacity-0 animate-fade-in" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
                 <p>
-                    Welcome to our world of endless imagination and boundless creativity.
-                    Together, let's embark on a remarkable journey where dreams become tangible realities.
+                    DecodeXtreme 2026: three open sessions and one SLTC team challenge. Prepare for IEEEXtreme 20.0. Free, fully online, and no IEEE membership needed.
                 </p>
             </div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <button className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#1BC2C5] transition-all duration-300">
-                    <span className="text-xs tracking-widest uppercase">What is Master Designer?</span>
+                <button onClick={() => window.location.assign("/services")} className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#1BC2C5] transition-all duration-300">
+                    <span className="text-xs tracking-widest uppercase">Explore the Program</span>
                     <span className="p-1 bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />
                     </span>
                 </button>
 
-                <button className="hero-btn group px-8 py-4 bg-transparent border border-white/10 text-white rounded-full font-semibold flex items-center gap-4 hover:bg-white/5 transition-all duration-300">
+                <button onClick={() => document.getElementById("timeline")?.scrollIntoView({ behavior: "smooth" })} className="hero-btn group px-8 py-4 bg-transparent border border-white/10 text-white rounded-full font-semibold flex items-center gap-4 hover:bg-white/5 transition-all duration-300">
                     <span className="text-xs tracking-widest uppercase">Timeline</span>
                     <span className="p-1 bg-white/10 rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />

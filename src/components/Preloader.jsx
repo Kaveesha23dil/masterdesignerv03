@@ -57,7 +57,7 @@ const Preloader = ({ onComplete }) => {
                 Loading Experience
             </div>
             <div className="preloader-text absolute bottom-12 right-12 text-sm uppercase tracking-widest opacity-50">
-                Master Designer
+                DecodeXtreme 2026
             </div>
         </div>
     );

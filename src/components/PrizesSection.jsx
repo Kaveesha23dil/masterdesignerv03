@@ -76,7 +76,7 @@ const PrizeCard = ({ title, amount, subTitle, isWinner = false, color = "var(--c
             {/* Winner Badge */}
             {isWinner && (
                 <div className="absolute -top-3 px-4 py-1 bg-[var(--color-primary)] text-black text-[10px] font-black tracking-widest uppercase rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
-                    Champion
+                    Pending
                 </div>
             )}
         </div>
@@ -139,59 +139,59 @@ const PrizesSection = () => {
                         PRIZES <span className="text-[var(--color-primary)]">&</span> AWARDS
                     </h2>
                     <p className="max-w-xl mx-auto text-white/50 text-lg">
-                        Recognizing excellence and innovation with premium rewards for the best performers.
+                        Prizes, award categories, and certificates have not yet been confirmed. Approved details will be announced by the organizers.
                     </p>
                 </div>
 
-                {/* Team Prizes */}
+                {/* Challenge Recognition */}
                 <div className="space-y-12">
                      <h3 className="text-2xl font-bold text-white text-center uppercase tracking-[0.2em] opacity-80 prize-title-anim">
-                        Team Prizes
+                        Challenge Recognition
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end max-w-5xl mx-auto">
                         <PrizeCard
-                            title="1st Runner Up"
-                            amount="LKR 45,000"
-                            subTitle="Silver"
+                            title="Awards Pending"
+                            amount="Pending"
+                            subTitle="Unconfirmed"
                             delay={0.1}
                         />
                         <PrizeCard
-                            title="Winner"
-                            amount="LKR 60,000"
-                            subTitle="Gold"
+                            title="To Be Announced"
+                            amount="Pending"
+                            subTitle="PreXtreme"
                             isWinner={true}
                             delay={0.2}
                         />
                         <PrizeCard
-                            title="2nd Runner Up"
-                            amount="LKR 30,000"
-                            subTitle="Bronze"
+                            title="Details Pending"
+                            amount="Pending"
+                            subTitle="Unconfirmed"
                             delay={0.3}
                         />
                     </div>
                 </div>
 
-                {/* Individual Prizes */}
+                {/* Participation Updates */}
                 <div className="space-y-12">
                     <h3 className="text-2xl font-bold text-white text-center uppercase tracking-[0.2em] opacity-80 prize-title-anim">
-                        Individual Prizes
+                        Participation Updates
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end max-w-5xl mx-auto">
                         <PrizeCard
-                            title="1st Runner Up"
-                            amount="LKR 15,000"
-                            subTitle="Silver"
+                            title="Awards Pending"
+                            amount="Pending"
+                            subTitle="Unconfirmed"
                         />
                         <PrizeCard
-                            title="Winner"
-                            amount="LKR 20,000"
-                            subTitle="Gold"
+                            title="To Be Announced"
+                            amount="Pending"
+                            subTitle="PreXtreme"
                             isWinner={true}
                         />
                         <PrizeCard
-                            title="2nd Runner Up"
-                            amount="LKR 10,000"
-                            subTitle="Bronze"
+                            title="Details Pending"
+                            amount="Pending"
+                            subTitle="Unconfirmed"
                         />
                     </div>
                 </div>
@@ -199,13 +199,13 @@ const PrizesSection = () => {
                  {/* Popularity Prize */}
                 <div className="space-y-12">
                    <h3 className="text-2xl font-bold text-white text-center uppercase tracking-[0.2em] opacity-80 prize-title-anim">
-                        Audience Choice
+                        Organizer Announcement
                     </h3>
                     <div className="flex justify-center max-w-5xl mx-auto">
                         <PrizeCard
-                            title="Most Popular"
-                            amount="LKR 10,000"
-                            subTitle="Voting" // Changed from VOTING to Voting for consistency
+                            title="Certificates Pending"
+                            amount="Pending"
+                            subTitle="Participation" // Changed from VOTING to Voting for consistency
                             isWinner={true}
                             color="#8b5cf6" // Keep purple override
                         />

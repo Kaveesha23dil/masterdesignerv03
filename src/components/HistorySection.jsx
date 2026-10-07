@@ -6,27 +6,9 @@ import { Clock, Award, Users, Sparkles } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const historyData = [
-    {
-        year: "2022",
-        title: "The Beginning",
-        description: "Master Designer v1.0 was launched with the vision to nurture creative talent and provide a platform for aspiring designers to showcase their skills.",
-        icon: Sparkles,
-        stats: "500+ Participants"
-    },
-    {
-        year: "2024",
-        title: "Growth & Evolution",
-        description: "Master Designer v2.0 expanded the competition nationally, introducing advanced workshops and mentorship programs with industry professionals.",
-        icon: Users,
-        stats: "1,200+ Participants"
-    },
-    {
-        year: "2026",
-        title: "New Heights",
-        description: "Master Designer v3.0 sets a new standard with an 8-day workshop series, online competition phases, and grand finale celebrating creative excellence.",
-        icon: Award,
-        stats: "2,000+ Expected"
-    }
+    { year: "01", title: "Problem Solving", description: "Learn to break problems into steps, choose algorithms, and test and debug your code in the Programming Fundamentals session.", icon: Sparkles, stats: "14 October | Open to everyone" },
+    { year: "02", title: "Team Strategy", description: "Practice problem triage, teamwork, and time management in Advanced Strategy before putting your approach to the test.", icon: Users, stats: "21 October | Open to everyone" },
+    { year: "03", title: "Contest Confidence", description: "Apply your preparation in the nine-hour online PreXtreme challenge on HackerRank with a complete three-member SLTC team.", icon: Award, stats: "24 October | SLTC teams only" }
 ];
 
 const HistorySection = () => {
@@ -126,11 +108,11 @@ const HistorySection = () => {
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <Clock className="text-[var(--color-primary)]" size={32} />
                         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-                            Our <span className="text-[var(--color-primary)]">Journey</span>
+                            Your <span className="text-[var(--color-primary)]">Preparation</span>
                         </h2>
                     </div>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-6">
-                        Tracing the evolution of Master Designer from its inception to becoming a premier platform for creative excellence
+                        Build the skills and confidence to think clearly, solve together, and compete.
                     </p>
                     <div className="w-32 h-1 bg-[var(--color-primary)] mx-auto mt-8"></div>
                 </div>
@@ -204,7 +186,7 @@ const HistorySection = () => {
                 {/* Bottom decorative text */}
                 <div className="text-center mt-16">
                     <p className="text-gray-600 text-sm tracking-[0.3em] uppercase font-bold">
-                        Building The Future of Design
+                        Think. Solve. Compete.
                     </p>
                 </div>
             </div>

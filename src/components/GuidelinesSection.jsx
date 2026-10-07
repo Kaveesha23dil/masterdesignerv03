@@ -32,49 +32,49 @@ const GuidelinesSection = () => {
         {
             icon: <Link className="w-8 h-8 text-[var(--color-primary)]" />,
             title: "Registration",
-            description: "Teams or individuals interested in participating in the competition should register through the registration link.",
+            description: "Register individually for each session. For PreXtreme, one captain registers the complete three-member team. Registration links are pending.",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
             icon: <AlertCircle className="w-6 h-6 text-purple-400" />,
             title: "Accuracy",
-            description: "Everyone should fill out all the information in the registration form correctly.",
+            description: "Check all names and contact details before submitting. Team registration requires each member's email, WhatsApp number, and SLTC student ID.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
             icon: <User className="w-6 h-6 text-yellow-400" />,
             title: "Eligibility",
-            description: "Anyone above the age of 15 can participate in the competition.",
+            description: "Sessions welcome everyone. The PreXtreme challenge is exclusively for teams of exactly three SLTC undergraduates. Free; no IEEE membership needed.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
             icon: <Calendar className="w-8 h-8 text-pink-400" />,
             title: "Deadlines",
-            description: "The registration deadline varies for workshops and competition rounds. Please refer to the timeline for specific dates.",
+            description: "All session and challenge registrations share one closing deadline. The date and time will be announced. Event times use Sri Lanka time (UTC+05:30).",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
             icon: <Users className="w-6 h-6 text-green-400" />,
             title: "Team Policy",
-            description: "After registering your team, you can't change your team members.",
+            description: "The captain submits all three members together. Final roster, collaboration, AI, and permitted-resource policies are awaiting organizer approval.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
             icon: <Mail className="w-6 h-6 text-blue-400" />,
             title: "Confirmation",
-            description: "Upon successful registration, participants will receive a confirmation email.",
+            description: "The planned flow confirms registration after details are saved. Email delivery is tracked separately; joining instructions will follow from the delegate team.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
             icon: <Ticket className="w-8 h-8 text-[var(--color-primary)]" />,
-            title: "Your ID",
-            description: "After the registration process, you will get a number. You should keep that number with you for the future work of the competition.",
+            title: "Get Ready",
+            description: "Prepare reliable internet and your coding environment. Follow the approved HackerRank instructions. On 24 October, check in at 8:00 AM; coding runs 9:00 AM-6:00 PM.",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
             icon: <CheckCircle2 className="w-6 h-6 text-red-400" />,
-            title: "Participation",
-            description: "If you are participating individually, you cannot participate in a team.",
+            title: "Challenge Rules",
+            description: "Scoring, tie-breaks, technical incidents, appeals, and conduct rules will be published after organizer approval. Read the final rules before team registration.",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         }
     ];
@@ -84,10 +84,10 @@ const GuidelinesSection = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 text-center">
                     <h2 className="text-5xl md:text-7xl font-display font-bold mb-6">
-                        Guidelines
+                        Delegate Guide
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Please review the following rules and guidelines before registering for the competition.
+                        Review the confirmed local event requirements. Final challenge policies and support details are pending.
                     </p>
                 </div>
 

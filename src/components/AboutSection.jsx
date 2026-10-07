@@ -90,15 +90,15 @@ const AboutSection = () => {
 
                     <h2 className="text-6xl md:text-7xl font-display leading-[1.1]">
                         What is <br />
-                        <span className="font-bold">Master</span> <span className="font-light">Designer?</span>
+                        <span className="font-bold">Decode</span> <span className="font-light">Xtreme?</span>
                     </h2>
 
                     <div className="space-y-6 text-gray-500 text-sm md:text-base leading-relaxed max-w-md">
                         <p>
-                            At our design studio, we are a collective of talented individuals ignited by our unwavering passion for transforming ideas into reality. With a harmonious blend of diverse backgrounds and a vast array of skill sets, we join forces to create compelling solutions for our esteemed clients.
+                            DecodeXtreme 2026 is an online preparation program organized by the IEEE Student Branch of SLTC and its Computer Society. Build your problem-solving process, develop team strategy, and gain confidence for programming competitions.
                         </p>
                         <p>
-                            Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.
+                            Awareness, Programming Fundamentals, and Advanced Strategy sessions welcome everyone. The PreXtreme challenge is exclusively for teams of exactly three SLTC undergraduates. All local activities are free and require no IEEE membership; global IEEEXtreme registration is separate.
                         </p>
                     </div>
 
@@ -106,7 +106,7 @@ const AboutSection = () => {
                         <div className="relative shrink-0">
                             <img
                                 src={projectChair}
-                                alt="Founder"
+                                alt="Organizer portrait pending confirmation"
                                 className="w-16 h-16 rounded-full object-cover grayscale"
                             />
                             <div className="absolute -bottom-1 -right-1 bg-[var(--color-primary)] p-1.5 rounded-full text-black flex items-center justify-center w-8 h-8">
@@ -114,8 +114,8 @@ const AboutSection = () => {
                             </div>
                         </div>
                         <div className="text-sm">
-                            <p className="font-bold text-black">Induwara Lakdinu <span className="font-light text-gray-500"></span></p>
-                            <p className="font-bold text-black">Chairperson <span className="font-light text-gray-500 italic">, Master Designer</span></p>
+                            <p className="font-bold text-black">IEEE Student Branch of SLTC <span className="font-light text-gray-500"></span></p>
+                            <p className="font-bold text-black">Organizer <span className="font-light text-gray-500 italic">, Computer Society</span></p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ const AboutSection = () => {
                 <div ref={imageRef} className="relative h-[500px] md:h-[700px] w-full overflow-hidden">
                     <img
                         src="https://images.unsplash.com/photo-1550684846-91a9258ae31b?auto=format&fit=crop&w=800&q=80"
-                        alt="Creative Studio"
+                        alt="Abstract creative background"
                         className="w-full h-[120%] object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out"
                     />
                 </div>
