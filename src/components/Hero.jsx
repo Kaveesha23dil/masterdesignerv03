@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { ArrowRight, MoveRight } from 'lucide-react';
 import gsap from 'gsap';
 import heroImage from '../assets/hero.png';
+import heroVideo from '../assets/Hooded_character_gazing_at_city_20261007122346.mp4';
 
 const Hero = ({ loading }) => {
     const containerRef = useRef(null);
@@ -52,11 +53,17 @@ const Hero = ({ loading }) => {
     return (
         <div ref={containerRef} className="relative z-10 flex flex-col justify-center min-h-screen container mx-auto px-6 lg:px-20">
 
-            {/* Hero Background Image */}
+            {/* Hero Background Video */}
             <div className="absolute inset-0 z-[-1] overflow-hidden flex items-center justify-center pointer-events-none">
-                <img
-                    src={heroImage}
-                    alt="Hero Background"
+                <video
+                    src={heroVideo}
+                    poster={heroImage}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-hidden="true"
                     className="hero-bg-img w-full h-full object-cover opacity-30 mix-blend-screen bg-blend-overlay"
                 />
             </div>

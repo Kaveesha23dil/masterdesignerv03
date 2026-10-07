@@ -1,127 +1,88 @@
-import React, { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import questMap from '../assets/timeline-map.png';
+import './TimelineSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const timelineData = [
-    { date: "12 OCTOBER 2026", title: "AWARENESS", description: "Discover the competition and participation pathway. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
-    { date: "14 OCTOBER 2026", title: "PROGRAMMING FUNDAMENTALS", description: "Problem decomposition, algorithms, coding, testing, and debugging. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
-    { date: "21 OCTOBER 2026", title: "ADVANCED STRATEGY", description: "Teamwork, time management, problem triage, and contest execution. Zoom, 8:00 PM; expected finish 10:00 PM. Open to everyone." },
-    { date: "24 OCTOBER 2026", title: "PREXTREME CHALLENGE", description: "Online on HackerRank. Check-in 8:00 AM; coding 9:00 AM to 6:00 PM. Exactly three SLTC undergraduates per team. All times are Sri Lanka time (UTC+05:30)." }
+    { date: '12 OCTOBER 2026', label: 'Awareness', title: 'Discover the challenge', description: 'Explore IEEEXtreme and your participation pathway. Begin your journey with the Awareness session, open to everyone.', time: '8:00 PM - approx. 10:00 PM', platform: 'Zoom · Open to everyone', x: 18.2, y: 60.5, labelY: 65.4 },
+    { date: '14 OCTOBER 2026', label: 'Fundamentals', title: 'Build your foundations', description: 'Break problems into steps. Explore algorithms, coding, testing, and debugging in Programming Fundamentals.', time: '8:00 PM - approx. 10:00 PM', platform: 'Zoom · Open to everyone', x: 46.4, y: 36, labelY: 40.8 },
+    { date: '21 OCTOBER 2026', label: 'Strategy', title: 'Plan your next move', description: 'Prepare your team for problem triage, time management, and contest execution in Advanced Strategy.', time: '8:00 PM - approx. 10:00 PM', platform: 'Zoom · Open to everyone', x: 83.7, y: 22.4, labelY: 27.1 },
+    { date: '24 OCTOBER 2026', label: 'PreXtreme', title: 'Enter the final challenge', description: 'Put your preparation to the test in a nine-hour coding challenge. Your captain registers a complete team of exactly three SLTC undergraduates.', time: 'Check-in 8:00 AM · Coding 9:00 AM - 6:00 PM', platform: 'HackerRank · SLTC teams of three', x: 84, y: 69.8, labelY: 75.1 },
 ];
 
 const TimelineSection = () => {
     const sectionRef = useRef(null);
-    const lineRef = useRef(null);
-    const itemsRef = useRef([]);
+    const triggerRef = useRef(null);
+    const [active, setActive] = useState(0);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            // Animate the vertical line drawing down
-            gsap.fromTo(lineRef.current,
-                { height: "0%" },
-                {
-                    height: "100%",
-                    duration: 1.5,
-                    ease: "power2.inOut",
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 70%",
-                        end: "bottom 80%",
-                        scrub: 1
-                    }
-                }
-            );
-
-            // Animate each timeline item
-            itemsRef.current.forEach((item, index) => {
-                const direction = index % 2 === 0 ? -50 : 50; // Alternate slide in from left/right
-
-                gsap.fromTo(item,
-                    {
-                        opacity: 0,
-                        y: 50,
-                        // x: direction 
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        // x: 0,
-                        duration: 0.8,
-                        ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: item,
-                            start: "top 85%",
-                            toggleActions: "play none none reverse"
-                        }
-                    }
-                );
-            });
-
-        }, sectionRef);
-
-        return () => ctx.revert();
+    useLayoutEffect(() => {
+        const trigger = ScrollTrigger.create({
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: 'bottom bottom',
+            invalidateOnRefresh: true,
+            onUpdate: self => setActive(Math.min(3, Math.floor(self.progress * 4))),
+        });
+        triggerRef.current = trigger;
+        return () => { trigger.kill(); triggerRef.current = null; };
     }, []);
 
-    const addToRefs = (el) => {
-        if (el && !itemsRef.current.includes(el)) {
-            itemsRef.current.push(el);
-        }
+    const goToStop = index => {
+        const trigger = triggerRef.current;
+        if (!trigger) return;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * ((index + 0.1) / 4), behavior: reducedMotion ? 'instant' : 'smooth' });
     };
+    const event = timelineData[active];
 
     return (
-        <section id="timeline" ref={sectionRef} className="relative w-full py-20 px-4 md:px-10 overflow-hidden bg-[#050505]">
-            {/* Background elements if needed */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 z-0">
-                {/* Optional subtle gradient or noise */}
-            </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-white">
-                        TIME<span className="text-[var(--color-primary)]">LINE</span>
-                    </h2>
-                    <div className="w-24 h-1 bg-[var(--color-primary)] mx-auto"></div>
-                </div>
-
-                <div className="relative">
-                    {/* Vertical Center Line */}
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2 transform">
-                        <div ref={lineRef} className="w-full bg-[var(--color-primary)] origin-top"></div>
+        <section id="timeline" ref={sectionRef} className="quest-timeline" aria-label="DecodeXtreme event timeline">
+            <div className="quest-sticky">
+                <header className="quest-header">
+                    <div>
+                        <p className="quest-eyebrow">DECODEXTREME 2026 / THE MISSION PATH</p>
+                        <h2>Your next <span>checkpoint.</span></h2>
                     </div>
+                    <p className="quest-scroll-hint"><ArrowDown size={15} /> Scroll to explore the journey</p>
+                </header>
 
-                    <div className="space-y-12">
-                        {timelineData.map((item, index) => (
-                            <div
-                                key={index}
-                                ref={addToRefs}
-                                className={`relative flex flex-col md:flex-row items-center justify-between w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                            >
-                                {/* Spacer for opposite side */}
-                                <div className="hidden md:block w-5/12"></div>
-
-                                {/* Center Dot */}
-                                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[var(--color-primary)] rounded-full -translate-x-1/2 transform z-20 shadow-[0_0_10px_var(--color-primary)]"></div>
-
-                                {/* Content Card */}
-                                <div className="ml-12 md:ml-0 w-full md:w-5/12 pl-4 md:pl-0">
-                                    <div className={`p-6 rounded-lg border border-white/5 bg-white/5 backdrop-blur-sm hover:border-[var(--color-primary)]/50 transition-colors duration-300 text-left`}>
-                                        <h3 className="text-[var(--color-primary)] font-bold text-lg mb-2 tracking-wide uppercase">
-                                            {item.date}
-                                        </h3>
-                                        <h4 className="text-2xl font-bold text-white mb-3">
-                                            {item.title}
-                                        </h4>
-                                        <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                <div className="quest-layout">
+                    <div className="quest-map" aria-label="Four event locations on a parchment map">
+                        <img src={questMap} alt="Parchment quest map with a coastal city, central palace, mountain fortress, and desert ruins" width="1672" height="941" />
+                        {timelineData.map((stop, index) => (
+                            <button key={stop.date} className={`quest-location ${index === active ? 'is-active' : ''} ${index < active ? 'is-complete' : ''}`} style={{ '--x': `${stop.x}%`, '--y': `${stop.y}%`, '--label-y': `${stop.labelY}%` }} onClick={() => goToStop(index)} aria-label={`${stop.date}: ${stop.label}`} aria-current={index === active ? 'step' : undefined}>
+                                <span className="quest-marker" />
+                                <span className="quest-map-label">{stop.label}</span>
+                            </button>
                         ))}
+                        <div className="quest-map-caption">FOUR CHECKPOINTS. ONE JOURNEY.</div>
+                    </div>
+
+                    <div className="quest-details" aria-live="polite" aria-atomic="true">
+                        <div className="quest-step"><span>CHECKPOINT {String(active + 1).padStart(2, '0')}</span><span>04</span></div>
+                        <div className="quest-progress" aria-hidden="true">{timelineData.map((stop, index) => <span key={stop.date} className={index <= active ? 'is-filled' : ''} />)}</div>
+                        <article key={active} className="quest-event">
+                            <p className="quest-date">{event.date}</p>
+                            <p className="quest-session">{event.label}</p>
+                            <h3>{event.title}</h3>
+                            <p className="quest-description">{event.description}</p>
+                            <dl className="quest-facts">
+                                <div><dt>WHEN</dt><dd>{event.time}</dd></div>
+                                <div><dt>WHERE / WHO</dt><dd>{event.platform}</dd></div>
+                            </dl>
+                            <p className="quest-timezone">Sri Lanka time (UTC+05:30) · Free entry</p>
+                            <a className="quest-cta" href="/services">Explore the program <ArrowUpRight size={18} /></a>
+                        </article>
+                        <p className="quest-footnote">No IEEE membership needed. Registration links and the common closing deadline will be announced.</p>
                     </div>
                 </div>
+                <nav className="quest-stops" aria-label="Timeline checkpoints">
+                    {timelineData.map((stop, index) => <button key={stop.date} onClick={() => goToStop(index)} className={index === active ? 'is-active' : ''} aria-current={index === active ? 'step' : undefined}><span>{String(index + 1).padStart(2, '0')}</span> {stop.label}</button>)}
+                </nav>
             </div>
         </section>
     );
