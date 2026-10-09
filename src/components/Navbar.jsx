@@ -47,7 +47,7 @@ const Navbar = () => {
             <NavOverlay isOpen={isOpen} onClose={() => setIsOpen(false)} />
             <nav
                 ref={navRef}
-                className={`fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 text-white transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-md py-4' : 'bg-[#111210]/70 backdrop-blur-md'}`}
+                className={`fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 text-white transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-md py-4' : 'bg-[#07131e]/70 backdrop-blur-md'}`}
             >
                 <a href="/" className="w-40 md:w-52" aria-label="DecodeXtreme homepage">
                     <img src={logo} alt="DecodeXtreme 2026" className="w-full h-auto" />

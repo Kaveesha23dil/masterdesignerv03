@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 
 const Newsletter = () => {
   return (
-    <div className='relative min-h-screen w-full bg-[#111210] text-white'>
+    <div className='relative min-h-screen w-full bg-[#07131e] text-white'>
       <div className='container mx-auto px-6 lg:px-20 py-40'>
         <h1 className='text-6xl md:text-8xl font-display font-bold mb-8'>Event Updates</h1>
         <p className='text-gray-400 text-lg max-w-2xl'>

@@ -1,40 +1,40 @@
-.quest-timeline { position: relative; height: 420vh; background: #111210; color: #f3eee3; }
+.quest-timeline { position: relative; height: 420vh; background: #07131e; color: #edf7fa; }
 .quest-sticky { position: sticky; top: 0; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 64px clamp(20px, 4vw, 72px) 28px; }
 .quest-header { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
-.quest-eyebrow { font-size: 10px; letter-spacing: .22em; color: #bd9460; margin-bottom: 12px; }
+.quest-eyebrow { font-size: 10px; letter-spacing: .22em; color: #75c5de; margin-bottom: 12px; }
 .quest-header h2 { font: 500 clamp(32px, 3.5vw, 56px)/1.1 var(--font-display); letter-spacing: -.04em; }
 .quest-header h2 span { color: var(--color-primary); }
-.quest-scroll-hint { display: flex; gap: 8px; align-items: center; font-size: 11px; color: #8c8c86; padding-bottom: 5px; }
+.quest-scroll-hint { display: flex; gap: 8px; align-items: center; font-size: 11px; color: #a0b8c6; padding-bottom: 5px; }
 .quest-layout { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(280px, 1fr); align-items: center; gap: clamp(24px, 3vw, 48px); }
 .quest-map { position: relative; width: 100%; aspect-ratio: 1672/941; }
 .quest-map img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .quest-location { position: absolute; inset: 0; pointer-events: none; color: #442810; }
 .quest-marker { position: absolute; left: var(--x); top: var(--y); width: 5.3%; aspect-ratio: 1; border: 2px solid transparent; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: auto; cursor: pointer; transition: border-color .3s, box-shadow .3s; }
-.quest-location.is-active .quest-marker { border-color: #fff1b0; box-shadow: 0 0 0 6px #f6bc5233, 0 0 28px #ffc763; }
+.quest-location.is-active .quest-marker { border-color: #c9fbff; box-shadow: 0 0 0 6px #08c4cf33, 0 0 28px #08c4cf; }
 .quest-map-label { position: absolute; left: var(--x); top: var(--label-y); width: 10%; transform: translate(-50%, -50%); font: 700 clamp(7px, .85vw, 14px)/1 var(--font-display); pointer-events: auto; cursor: pointer; }
-.quest-location.is-active .quest-map-label { color: #6b231d; }
+.quest-location.is-active .quest-map-label { color: #063e61; }
 .quest-location:focus-visible .quest-marker { outline: 3px solid var(--color-primary); outline-offset: 5px; }
 .quest-map-caption { position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); font-size: 8px; font-weight: 700; letter-spacing: .2em; color: #492e18; white-space: nowrap; }
-.quest-details { border-left: 1px solid #b88a4433; padding-left: clamp(20px, 2.5vw, 40px); }
-.quest-step { display: flex; justify-content: space-between; color: #bf9a69; font-size: 10px; letter-spacing: .16em; }
+.quest-details { border-left: 1px solid #08c4cf33; padding-left: clamp(20px, 2.5vw, 40px); }
+.quest-step { display: flex; justify-content: space-between; color: #75c5de; font-size: 10px; letter-spacing: .16em; }
 .quest-progress { display: flex; gap: 6px; margin: 14px 0 24px; }
 .quest-progress span { height: 2px; flex: 1; background: #ffffff17; transition: background .3s; }
 .quest-progress .is-filled { background: var(--color-primary); }
 .quest-event { animation: quest-reveal .4s ease both; min-height: 320px; }
 .quest-date { color: var(--color-primary); font-size: 11px; letter-spacing: .13em; margin-bottom: 12px; }
-.quest-session { color: #ba9664; font-size: 12px; margin-bottom: 8px; }
+.quest-session { color: #75c5de; font-size: 12px; margin-bottom: 8px; }
 .quest-event h3 { font: 500 clamp(26px, 2.4vw, 40px)/1.08 var(--font-display); letter-spacing: -.025em; max-width: 320px; margin-bottom: 16px; }
-.quest-description { color: #a6a8a0; font-size: 13px; line-height: 1.7; margin-bottom: 20px; }
+.quest-description { color: #a9c0cd; font-size: 13px; line-height: 1.7; margin-bottom: 20px; }
 .quest-facts { display: grid; gap: 12px; }
-.quest-facts dt { font-size: 9px; letter-spacing: .15em; color: #777e73; margin-bottom: 3px; }
+.quest-facts dt { font-size: 9px; letter-spacing: .15em; color: #8ca9b9; margin-bottom: 3px; }
 .quest-facts dd { font-size: 12px; line-height: 1.5; }
-.quest-timezone { color: #a58a65; font-size: 10px; margin-top: 14px; }
-.quest-cta { display: inline-flex; align-items: center; gap: 14px; margin-top: 20px; padding: 12px 18px; border: 1px solid #c7a66a66; border-radius: 30px; color: var(--color-primary); font-size: 11px; transition: background .2s; }
-.quest-cta:hover { background: #c7a66a15; }
-.quest-footnote { font-size: 10px; line-height: 1.6; color: #71766e; margin-top: 20px; }
+.quest-timezone { color: #90c3d5; font-size: 10px; margin-top: 14px; }
+.quest-cta { display: inline-flex; align-items: center; gap: 14px; margin-top: 20px; padding: 12px 18px; border: 1px solid #08c4cf66; border-radius: 30px; color: var(--color-primary); font-size: 11px; transition: background .2s; }
+.quest-cta:hover { background: #08c4cf15; }
+.quest-footnote { font-size: 10px; line-height: 1.6; color: #8ca9b9; margin-top: 20px; }
 .quest-stops { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #ffffff12; margin-top: 28px; padding-top: 18px; }
-.quest-stops button { color: #7f837a; font-size: 11px; cursor: pointer; padding: 6px 0; }
-.quest-stops button span { color: #a58760; margin-right: 8px; font-size: 10px; }
+.quest-stops button { color: #a0b8c6; font-size: 11px; cursor: pointer; padding: 6px 0; }
+.quest-stops button span { color: #75c5de; margin-right: 8px; font-size: 10px; }
 .quest-stops button.is-active { color: var(--color-primary); }
 .quest-stops button:focus-visible, .quest-cta:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 5px; }
 @keyframes quest-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }

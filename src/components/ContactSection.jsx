@@ -85,24 +85,24 @@ const ContactSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-[var(--color-parchment)] text-black flex flex-col lg:flex-row overflow-hidden">
+        <section ref={sectionRef} className="relative w-full min-h-screen bg-[var(--color-light-surface)] text-black flex flex-col lg:flex-row overflow-hidden">
 
             {/* Background Grid Lines (Subtle) */}
             <div className="absolute inset-0 pointer-events-none z-0">
                 <div className="w-full h-full grid grid-cols-12 gap-0">
                     {[...Array(12)].map((_, i) => (
-                        <div key={i} className={`h-full border-r border-[#d6cab3] ${i === 0 || i === 11 ? 'hidden md:block' : ''}`}></div>
+                        <div key={i} className={`h-full border-r border-[#cadfe7] ${i === 0 || i === 11 ? 'hidden md:block' : ''}`}></div>
                     ))}
                 </div>
             </div>
 
             {/* Circular Decorations */}
-            <div className="absolute left-0 top-1/4 -translate-x-1/2 w-[600px] h-[600px] border border-[#d6cab3] rounded-full pointer-events-none opacity-50 z-0"></div>
-            <div className="absolute left-0 bottom-0 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] border border-[#d6cab3] rounded-full pointer-events-none opacity-50 z-0"></div>
+            <div className="absolute left-0 top-1/4 -translate-x-1/2 w-[600px] h-[600px] border border-[#cadfe7] rounded-full pointer-events-none opacity-50 z-0"></div>
+            <div className="absolute left-0 bottom-0 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] border border-[#cadfe7] rounded-full pointer-events-none opacity-50 z-0"></div>
 
 
             {/* LEFT SIDE (Content) */}
-            <div className="relative w-full lg:w-[45%] p-10 lg:p-24 flex flex-col justify-center border-r border-[#d6cab3] bg-[var(--color-parchment)] z-10">
+            <div className="relative w-full lg:w-[45%] p-10 lg:p-24 flex flex-col justify-center border-r border-[#cadfe7] bg-[var(--color-light-surface)] z-10">
                 <div ref={leftTextRef} className="max-w-lg">
                     {/* Heading */}
                     <h2 className="text-6xl lg:text-7xl font-bold leading-tight mb-8 text-black tracking-tight font-display">
@@ -117,9 +117,9 @@ const ContactSection = () => {
                     </p>
 
                     {/* CTA Button */}
-                    <button onClick={() => window.location.assign("/portfolio")} className="group flex items-center justify-between w-48 bg-[var(--color-primary)] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#ddbd80] transition-colors mb-20 shadow-lg shadow-[var(--color-primary)]/20">
+                    <button onClick={() => window.location.assign("/portfolio")} className="group flex items-center justify-between w-48 bg-[var(--color-primary)] text-black px-6 py-4 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-[#56dce4] transition-colors mb-20 shadow-lg shadow-[var(--color-primary)]/20">
                         Our Team
-                        <span className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full group-hover:bg-[var(--color-parchment)] group-hover:text-black transition-colors -mr-2">
+                        <span className="w-8 h-8 flex items-center justify-center bg-black text-white rounded-full group-hover:bg-[var(--color-light-surface)] group-hover:text-black transition-colors -mr-2">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -143,7 +143,7 @@ const ContactSection = () => {
             </div>
 
             {/* RIGHT SIDE (Grid) */}
-            <div className="relative w-full lg:w-[55%] flex flex-col bg-[var(--color-parchment)] z-10">
+            <div className="relative w-full lg:w-[55%] flex flex-col bg-[var(--color-light-surface)] z-10">
                 {/* Top Label */}
                 <div className="absolute top-10 right-10 flex items-center gap-2 text-xs font-medium text-gray-400 z-20">
                     <span className="text-[var(--color-primary)] text-lg">✦</span> The DecodeXtreme organizers
@@ -175,7 +175,7 @@ const ContactSection = () => {
             <div className="absolute right-8 bottom-10 hidden lg:flex flex-col items-center gap-4 z-20">
                 <button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="w-10 h-10 rounded-full bg-[#ded3bd] flex items-center justify-center hover:bg-[#e0e0e0] transition-colors"
+                    className="w-10 h-10 rounded-full bg-[#d9eaf0] flex items-center justify-center hover:bg-[#e0e0e0] transition-colors"
                 >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="12" y1="19" x2="12" y2="5"></line>

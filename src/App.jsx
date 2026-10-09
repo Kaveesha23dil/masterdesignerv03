@@ -78,7 +78,7 @@ const App = () => {
     }, []);
 
     return (
-        <div className='relative min-h-screen w-full bg-[#111210] text-white selection:bg-[var(--color-primary)] selection:text-black'>
+        <div className='relative min-h-screen w-full bg-[#07131e] text-white selection:bg-[var(--color-primary)] selection:text-black'>
             {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
 
             <div

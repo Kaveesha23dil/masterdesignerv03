@@ -70,7 +70,7 @@ const AboutSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full min-h-screen bg-[var(--color-parchment)] text-black py-20 px-8 md:px-24 overflow-hidden flex items-center">
+        <section ref={sectionRef} className="relative w-full min-h-screen bg-[var(--color-light-surface)] text-black py-20 px-8 md:px-24 overflow-hidden flex items-center">
             {/* Background Geometric Shapes */}
             <div ref={shapesRef} className="absolute top-0 right-0 w-1/2 h-full pointer-events-none opacity-5 origin-center">
                 <div className="absolute top-0 left-0 w-full h-px bg-black"></div>

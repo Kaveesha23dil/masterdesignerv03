@@ -36,31 +36,31 @@ const GuidelinesSection = () => {
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
-            icon: <AlertCircle className="w-6 h-6 text-[#d3b27b]" />,
+            icon: <AlertCircle className="w-6 h-6 text-[#56dce4]" />,
             title: "Accuracy",
             description: "Check all names and contact details before submitting. Team registration requires each member's email, WhatsApp number, and SLTC student ID.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
-            icon: <User className="w-6 h-6 text-[#d3b27b]" />,
+            icon: <User className="w-6 h-6 text-[#56dce4]" />,
             title: "Eligibility",
             description: "Sessions welcome everyone. The PreXtreme challenge is exclusively for teams of exactly three SLTC undergraduates. Free; no IEEE membership needed.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
-            icon: <Calendar className="w-8 h-8 text-[#c77b70]" />,
+            icon: <Calendar className="w-8 h-8 text-[#64b9e7]" />,
             title: "Deadlines",
             description: "All session and challenge registrations share one closing deadline. The date and time will be announced. Event times use Sri Lanka time (UTC+05:30).",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
-            icon: <Users className="w-6 h-6 text-[#a6b496]" />,
+            icon: <Users className="w-6 h-6 text-[#60cdd7]" />,
             title: "Team Policy",
             description: "The captain submits all three members together. Final roster, collaboration, AI, and permitted-resource policies are awaiting organizer approval.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
         },
         {
-            icon: <Mail className="w-6 h-6 text-[#b9b0a1]" />,
+            icon: <Mail className="w-6 h-6 text-[#a9c0cd]" />,
             title: "Confirmation",
             description: "The planned flow confirms registration after details are saved. Email delivery is tracked separately; joining instructions will follow from the delegate team.",
             className: "md:col-span-1 md:row-span-1 bg-white/5"
@@ -72,7 +72,7 @@ const GuidelinesSection = () => {
             className: "md:col-span-2 md:row-span-1 bg-white/5"
         },
         {
-            icon: <CheckCircle2 className="w-6 h-6 text-[#c77b70]" />,
+            icon: <CheckCircle2 className="w-6 h-6 text-[#64b9e7]" />,
             title: "Challenge Rules",
             description: "Scoring, tie-breaks, technical incidents, appeals, and conduct rules will be published after organizer approval. Read the final rules before team registration.",
             className: "md:col-span-2 md:row-span-1 bg-white/5"
@@ -80,7 +80,7 @@ const GuidelinesSection = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="relative w-full py-24 px-6 md:px-12 bg-[#171815] text-white">
+        <section ref={sectionRef} className="relative w-full py-24 px-6 md:px-12 bg-[#0c1d2b] text-white">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 text-center">
                     <h2 className="text-5xl md:text-7xl font-display font-bold mb-6">
