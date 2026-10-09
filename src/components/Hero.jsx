@@ -1,9 +1,10 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import { ArrowRight, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import gsap from 'gsap';
 import heroImage from '../assets/hero.png';
 import heroVideo from '../assets/Hooded_character_gazing_at_city_20261007122346.mp4';
 import OrganizerLogos from './OrganizerLogos';
+import './Hero.css';
 
 const Hero = ({ loading }) => {
     const containerRef = useRef(null);
@@ -52,10 +53,10 @@ const Hero = ({ loading }) => {
     }, [loading]);
 
     return (
-        <div ref={containerRef} className="relative z-10 flex flex-col justify-center min-h-screen container mx-auto px-6 lg:px-20 pt-36 md:pt-44 pb-16">
+        <section ref={containerRef} className="hero-section" aria-label="DecodeXtreme introduction">
 
             {/* Hero Background Video */}
-            <div className="absolute inset-0 z-[-1] overflow-hidden flex items-center justify-center pointer-events-none">
+            <div className="hero-media">
                 <video
                     src={heroVideo}
                     poster={heroImage}
@@ -65,9 +66,11 @@ const Hero = ({ loading }) => {
                     playsInline
                     preload="metadata"
                     aria-hidden="true"
-                    className="hero-bg-img w-full h-full object-cover opacity-30 mix-blend-screen bg-blend-overlay"
+                    className="hero-bg-img"
                 />
             </div>
+            <div className="hero-shade" aria-hidden="true" />
+            <div className="hero-content">
 
             {/* Side Text */}
             <div className="side-text absolute left-6 bottom-32 -rotate-90 origin-left text-xs tracking-[0.3em] text-gray-400 font-medium hidden md:block">
@@ -75,12 +78,12 @@ const Hero = ({ loading }) => {
             </div>
 
             <div ref={titleRef} className="mb-8 md:mb-12">
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-medium leading-[1.1] tracking-tight">
+                <h1 className="hero-heading font-display font-medium">
                     <div className="overflow-hidden">
-                        <span className="block">Think. <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Solve.</span></span>
+                        <span className="block">Think. <span className="hero-heading-secondary">Solve.</span></span>
                     </div>
                     <div className="overflow-hidden">
-                        <span className="block font-bold">Compete. <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Beyond.</span></span>
+                        <span className="block font-bold">Compete. <span className="hero-heading-secondary">Beyond.</span></span>
                     </div>
                 </h1>
             </div>
@@ -107,7 +110,8 @@ const Hero = ({ loading }) => {
                 </button>
             </div>
             <OrganizerLogos />
-        </div>
+            </div>
+        </section>
     );
 };
 
