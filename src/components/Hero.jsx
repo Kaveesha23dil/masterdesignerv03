@@ -3,6 +3,7 @@ import { ArrowRight, MoveRight } from 'lucide-react';
 import gsap from 'gsap';
 import heroImage from '../assets/hero.png';
 import heroVideo from '../assets/Hooded_character_gazing_at_city_20261007122346.mp4';
+import OrganizerLogos from './OrganizerLogos';
 
 const Hero = ({ loading }) => {
     const containerRef = useRef(null);
@@ -51,7 +52,7 @@ const Hero = ({ loading }) => {
     }, [loading]);
 
     return (
-        <div ref={containerRef} className="relative z-10 flex flex-col justify-center min-h-screen container mx-auto px-6 lg:px-20">
+        <div ref={containerRef} className="relative z-10 flex flex-col justify-center min-h-screen container mx-auto px-6 lg:px-20 pt-36 md:pt-44 pb-16">
 
             {/* Hero Background Video */}
             <div className="absolute inset-0 z-[-1] overflow-hidden flex items-center justify-center pointer-events-none">
@@ -73,7 +74,7 @@ const Hero = ({ loading }) => {
                 HOMEPAGE
             </div>
 
-            <div ref={titleRef} className="mb-12 mt-10">
+            <div ref={titleRef} className="mb-8 md:mb-12">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-medium leading-[1.1] tracking-tight">
                     <div className="overflow-hidden">
                         <span className="block">Think. <span className="font-light text-gray-400 text-5xl md:text-7xl lg:text-8xl align-baseline">Solve.</span></span>
@@ -91,7 +92,7 @@ const Hero = ({ loading }) => {
             </div>
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                <button onClick={() => window.location.assign("/services")} className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#1BC2C5] transition-all duration-300">
+                <button onClick={() => window.location.assign("/services")} className="hero-btn group relative px-8 py-4 bg-[var(--color-primary)] text-black rounded-full font-semibold flex items-center gap-4 hover:bg-[#56dce4] transition-all duration-300">
                     <span className="text-xs tracking-widest uppercase">Explore the Program</span>
                     <span className="p-1 bg-black text-white rounded-full group-hover:bg-white group-hover:text-black transition-colors">
                         <MoveRight size={16} />
@@ -105,6 +106,7 @@ const Hero = ({ loading }) => {
                     </span>
                 </button>
             </div>
+            <OrganizerLogos />
         </div>
     );
 };

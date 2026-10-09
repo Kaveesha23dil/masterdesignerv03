@@ -1,19 +1,21 @@
-.minimal-footer { position: relative; padding: clamp(24px, 5vw, 80px); background: #131514; color: #f5f6f3; }
-.minimal-footer-panel { max-width: 1440px; margin: auto; padding: clamp(24px, 4vw, 64px) clamp(24px, 4vw, 64px) 12px; background: #090b0a; border: 1px solid #ffffff06; border-radius: 16px; overflow: hidden; }
+.minimal-footer { position: relative; padding: clamp(24px, 5vw, 80px); background: #0c2030; color: #edf7fa; }
+.minimal-footer-panel { max-width: 1440px; margin: auto; padding: clamp(24px, 4vw, 64px) clamp(24px, 4vw, 64px) 12px; background: #06121d; border: 1px solid #ffffff06; border-radius: 16px; overflow: hidden; }
 .minimal-footer-top { display: grid; grid-template-columns: 2.3fr 1fr 1.2fr 1.4fr; gap: clamp(24px, 3vw, 56px); }
 .minimal-footer-brand > a { font: 600 clamp(20px, 2vw, 30px)/1 var(--font-display); letter-spacing: -.045em; display: inline-block; }
 .minimal-footer-brand > a span { font: 400 11px/1 var(--font-body); vertical-align: top; margin-left: 4px; }
-.minimal-footer-brand p { color: #a3aaa4; font-size: 12px; line-height: 1.7; margin-top: 18px; max-width: 320px; }
+.minimal-footer-brand p { color: #a9c0cd; font-size: 12px; line-height: 1.7; margin-top: 18px; max-width: 320px; }
 .minimal-footer-column { display: flex; flex-direction: column; gap: 12px; font-size: 11px; line-height: 1.5; }
-.minimal-footer-column h3 { color: #f0f3ee; font-size: 12px; font-weight: 500; margin-bottom: 6px; }
-.minimal-footer-column a, .minimal-footer-column > span { color: #939d95; }
+.minimal-footer-column h3 { color: #edf7fa; font-size: 12px; font-weight: 500; margin-bottom: 6px; }
+.minimal-footer-column a, .minimal-footer-column > span { color: #a9c0cd; }
 .minimal-footer-column a { display: inline-flex; align-items: center; gap: 4px; width: fit-content; transition: color .2s; }
-.minimal-footer a:hover { color: #66dab0; }
-.minimal-footer a:focus-visible { outline: 2px solid #66dab0; outline-offset: 5px; border-radius: 2px; }
-.minimal-footer-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: clamp(48px, 6vw, 90px); font-size: 10px; color: #9fa8a1; }
+.minimal-footer a:hover { color: #56dce4; }
+.minimal-footer a:focus-visible { outline: 2px solid #56dce4; outline-offset: 5px; border-radius: 2px; }
+.minimal-footer-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: clamp(48px, 6vw, 90px); font-size: 10px; color: #a9c0cd; }
 .minimal-footer-meta a { display: inline-flex; align-items: center; gap: 5px; transition: color .2s; }
-.minimal-footer-meta a span { color: #e0e7e1; }
-.minimal-footer-wordmark { margin-top: 18px; padding-bottom: 4px; font: 700 clamp(30px, 9.5vw, 150px)/1.05 var(--font-display); letter-spacing: -.065em; text-align: center; white-space: nowrap; background: linear-gradient(90deg, #10221b 0%, #2e8162 25%, #64d3a8 50%, #2e8162 75%, #10221b 100%); background-clip: text; -webkit-background-clip: text; color: transparent; user-select: none; }
+.minimal-footer-meta a span { color: #edf7fa; }
+.minimal-footer-wordmark { margin-top: 18px; padding-bottom: 4px; font: 700 clamp(30px, 9.5vw, 150px)/1.05 var(--font-display); letter-spacing: -.065em; text-align: center; white-space: nowrap; background: linear-gradient(90deg, #092b3a 0%, #087c96 25%, #28d0db 50%, #087c96 75%, #092b3a 100%); background-clip: text; -webkit-background-clip: text; color: transparent; user-select: none; }
 @media (min-width: 1600px) { .minimal-footer-wordmark { font-size: 150px; } }
 @media (max-width: 900px) { .minimal-footer-top { grid-template-columns: repeat(3, 1fr); } .minimal-footer-brand { grid-column: 1 / -1; } }
 @media (max-width: 540px) { .minimal-footer { padding: 20px 12px; } .minimal-footer-panel { padding: 28px 20px 12px; border-radius: 12px; } .minimal-footer-top { grid-template-columns: 1fr 1fr; gap: 28px 18px; } .minimal-footer-top > div:last-child { grid-column: 1 / -1; } .minimal-footer-meta { margin-top: 36px; gap: 10px; font-size: 9px; } .minimal-footer-wordmark { font-size: 8.4vw; margin-top: 24px; } }
+
+.minimal-footer-brand-logo { display: block; width: min(240px, 100%); height: auto; }

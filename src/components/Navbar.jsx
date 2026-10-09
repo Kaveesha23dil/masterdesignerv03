@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState, useRef, useLayoutEffect } from 'react'; // Added useRef, useLayoutEffect
 import NavOverlay from './NavOverlay';
-import logo from '../assets/logo.png';
+import logo from '../assets/DecodeXtreme Logo.webp';
 import gsap from 'gsap'; // Added gsap
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Added ScrollTrigger
 
@@ -47,12 +47,13 @@ const Navbar = () => {
             <NavOverlay isOpen={isOpen} onClose={() => setIsOpen(false)} />
             <nav
                 ref={navRef}
-                className={`fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 text-white transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-md py-4' : 'mix-blend-difference'}`}
+                className={`fixed top-0 left-0 w-full flex justify-between items-center p-8 z-50 text-white transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-md py-4' : 'bg-[#07131e]/70 backdrop-blur-md'}`}
             >
-                <div className="w-12">
-                    <img src={logo} alt="Logo" className="w-full h-auto" />
-                </div>
+                <a href="/" className="w-40 md:w-52" aria-label="DecodeXtreme homepage">
+                    <img src={logo} alt="DecodeXtreme 2026" className="w-full h-auto" />
+                </a>
                 <button
+                    aria-label={isOpen ? "Close navigation" : "Open navigation"}
                     onClick={() => setIsOpen(!isOpen)}
                     className="p-2 hover:bg-white/10 rounded-full transition-colors cursor-pointer"
                 >

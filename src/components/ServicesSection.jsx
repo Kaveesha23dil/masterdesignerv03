@@ -156,7 +156,7 @@ const ServicesSection = () => {
                             <span className="font-bold">Xtreme, </span> <span className="font-light text-gray-400">One Step at a Time.</span>
                         </h2>
 
-                        <button onClick={() => window.location.assign("/pages#timeline")} className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#1BC2C5] transition-colors mt-4 md:mt-0">
+                        <button onClick={() => window.location.assign("/pages#timeline")} className="bg-[var(--color-primary)] text-black px-8 py-4 rounded-full font-bold flex items-center gap-4 hover:bg-[#56dce4] transition-colors mt-4 md:mt-0">
                             <span className="text-xs tracking-widest uppercase">Timeline</span>
                             <div className="bg-black text-white p-1 rounded-full">
                                 <MoveRight size={16} />
